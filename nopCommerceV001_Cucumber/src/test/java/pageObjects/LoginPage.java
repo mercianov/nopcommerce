@@ -14,7 +14,7 @@ import utilities.commonUtil;
 import java.util.List;
 
 import static utilities.commonUtil.enterText;
-
+import static utilities.commonUtil.compareScreenshootImage;
 
 public class LoginPage {
 	public WebDriver ldriver;
@@ -58,24 +58,9 @@ public class LoginPage {
 	}
 
 	public void isOnLoginPage() {
-		//this eyes applitools will do the job comparing images screenshot
-		Eyes eyes = new Eyes();
-		eyes.setApiKey("QC99mwcNjuAs1f2Ijq3K4WTrH4g9ZD2OxElCab1040QG3k110");
-		eyes.open(ldriver, "https://admin-demo.nopcommerce.com/login", "Admin area demo");
-
-		// Navigate to the page you want to capture
-		ldriver.get("http://admin-demo.nopcommerce.com/login");
-
-		// Set match level to content: it's around 80% same
-		eyes.setMatchLevel(MatchLevel.CONTENT);
-
-		// Capture the entire page
-		eyes.checkWindow("Full Page");
-
-		// Close Applitools Eyes session
-		eyes.close();
-
-		// Close the WebDriver
-		ldriver.quit();
+		String appName = "https://admin-demo.nopcommerce.com/login";
+		String testName = "Admin area demo";
+		String appUrl = "http://admin-demo.nopcommerce.com/login";
+		compareScreenshootImage(ldriver, appName, testName, appUrl);
 	}
 }
