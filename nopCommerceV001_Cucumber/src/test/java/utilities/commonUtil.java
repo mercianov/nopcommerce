@@ -1,5 +1,7 @@
 package utilities;
 
+import com.applitools.eyes.MatchLevel;
+import com.applitools.eyes.selenium.Eyes;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -108,5 +110,27 @@ public class commonUtil {
                 .release()
                 .build()
                 .perform();
+    }
+    public static void compareScreenshootImage(WebDriver driver, String appName, String testName, String appURL){
+        //this eyes applitools will do the job comparing images screenshot
+        Eyes eyes = new Eyes();
+        eyes.setApiKey("QC99mwcNjuAs1f2Ijq3K4WTrH4g9ZD2OxElCab1040QG3k110");
+        eyes.open(driver, appName, testName);
+
+        // Navigate to the page you want to capture
+        driver.get(appURL);
+
+        // Set match level to content: it's around 80% same
+        eyes.setMatchLevel(MatchLevel.CONTENT);
+
+        // Capture the entire page
+        eyes.checkWindow("Full Page");
+
+        // Close Applitools Eyes session
+        eyes.close();
+
+        // Close the WebDriver
+        driver.quit();
+
     }
 }
