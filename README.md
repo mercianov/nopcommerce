@@ -1,8 +1,8 @@
 # nopcommerce
 BDD Selenium Java Cucumber framework for web testing
 - How to run the test project nopCommerceV001_Cucumber from `Features`:
-1. Open folder features on IDEA
-2. Open a cucumber feature file
+1. Open folder `Features` on IDEA
+2. Choose a cucumber feature file and open it
 3. Run on level per scenario for 1 scenario at one time, or 
 4. Run on feature level to test all scenarios at the feature file
 
