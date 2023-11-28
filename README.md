@@ -7,8 +7,8 @@ BDD Selenium Java Cucumber framework for web testing
 4. Run on feature level to test all scenarios at the feature file
 
 - How to run from testRunner:
-1.  Open /src/test/java/testRunner/TestRun.java
+1.  Open `/src/test/java/testRunner/TestRun.java`
 2.  Fill in the tags with scenario tag you wanna run
 3.  Run this file as testNG
 
-It aim for testing demo web http://admin-demo.nopcommerce.com/login
+It aim for testing demo web `http://admin-demo.nopcommerce.com/login`
