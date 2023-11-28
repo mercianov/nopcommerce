@@ -101,8 +101,8 @@ public class Steps extends BaseClass {
 		addCust.setEmail(email);
 		addCust.setPassword("test123");
 		addCust.setGender("Male");
-		addCust.setFirstName("Pavan");
-		addCust.setLastName("Kumar");
+		addCust.setFirstName("Anto");
+		addCust.setLastName("Widodo");
 		addCust.setDob("11/22/2023");
 		addCust.setCompanyName("busyQA");
 		addCust.setCustomerRoles("Guest");
